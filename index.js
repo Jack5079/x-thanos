@@ -23,13 +23,12 @@ class Thanos extends HTMLElement {
         soundtimeout = setTimeout(()=>playSound('https://www.google.com/logos/fnbx/thanos/thanos_snap_sound.mp3'), 1000) // play the sound
         this.querySelector('img').src = 'snap.gif' // snap picture
 
-        elements = Array.from(document.querySelectorAll('*')) // array of everything on the page
+        elements = Array.from(document.querySelectorAll('body *')) // array of everything on the page
           .filter(ele=>
               ele.parentElement != this  // can't be in gauntlet
               && !ele.children.length  // can't have other stuff in it
               && Math.random()>0.5 // half
             )
-
         elements.forEach(ele => {
           ele.animate([ // fade away
             {opacity: 0, filter: 'blur(50px)'} // fade and blur
