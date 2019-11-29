@@ -27,8 +27,8 @@ class Thanos extends HTMLElement {
           .filter(ele=>
               ele.parentElement != this  // can't be in gauntlet
               && !ele.children.length  // can't have other stuff in it
-              && Math.random()>0.5 // half
-            )
+              )
+            .filter(_=>0.5>Math.random()) // half
         elements.forEach(ele => {
           ele.animate([ // fade away
             {opacity: 0, filter: 'blur(50px)'} // fade and blur
