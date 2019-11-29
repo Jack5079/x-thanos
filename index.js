@@ -2,9 +2,9 @@ const playSound = url=>new Audio(url).play()
 
 class Thanos extends HTMLElement {
   constructor() {
+    super()
     let soundtimeout
     let imgtimeout
-    super()
     this.style.cursor = 'pointer'
     let img = new Image(80, 80)
     img.src = 'https://www.google.com/logos/fnbx/thanos/thanos_idle.png'
