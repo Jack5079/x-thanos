@@ -25,7 +25,7 @@ class Thanos extends HTMLElement {
 
         elements = Array.from(document.querySelectorAll('body *')) // array of everything on the page
           .filter(ele=>
-              ele.parentElement != this  // can't be in gauntlet
+              !this.contains(ele)  // can't be in gauntlet
               && !ele.children.length  // can't have other stuff in it
               )
             .filter(_=>0.5>Math.random()) // half
