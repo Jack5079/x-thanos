@@ -27,6 +27,7 @@ class Thanos extends HTMLElement {
           .filter(ele=>
               !this.contains(ele)  // can't be in gauntlet
               && !ele.children.length  // can't have other stuff in it
+              && getComputedStyle(ele).display != 'none' // must be visble
               )
             .filter(_=>0.5>Math.random()) // half
         elements.forEach(ele => {
