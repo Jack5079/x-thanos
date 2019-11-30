@@ -29,7 +29,7 @@ class Thanos extends HTMLElement {
               && !ele.children.length  // can't have other stuff in it
               && getComputedStyle(ele).display != 'none' // must be visble
               )
-            .filter((h,_,arr)=>arr.indexOf(h)<arr.length / 2) // get first half
+            .filter((h,_,arr)=>arr.indexOf(h) < arr.length / 2) // get first half
         elements.forEach(ele => {
           ele.animate([ // fade away
             {opacity: 0, filter: 'blur(50px)'} // fade and blur
