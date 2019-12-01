@@ -32,6 +32,7 @@ class Thanos extends HTMLElement {
             .filter((h,_,arr)=>arr.indexOf(h) < arr.length / 2) // get first half
         elements.forEach(ele => {
           ele.animate([ // fade away
+            {opacity:1},
             {opacity: 0, filter: 'blur(50px)'} // fade and blur
           ], {
             duration: 2300,
@@ -45,6 +46,7 @@ class Thanos extends HTMLElement {
         this.querySelector('img').src = 'reverse.gif' // snap picture
         elements.forEach(ele => {
          ele.animate([ // reverse the snap effect
+          {opacity: 0, filter: 'blur(50px)'}
            { opacity: 1, filter: 'blur(0)' }
          ], {
            duration: 3100,
