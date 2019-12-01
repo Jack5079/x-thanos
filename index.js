@@ -46,7 +46,7 @@ class Thanos extends HTMLElement {
         this.querySelector('img').src = 'reverse.gif' // snap picture
         elements.forEach(ele => {
          ele.animate([ // reverse the snap effect
-          {opacity: 0, filter: 'blur(50px)'}
+          {opacity: 0, filter: 'blur(50px)'},
            { opacity: 1, filter: 'blur(0)' }
          ], {
            duration: 3100,
