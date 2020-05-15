@@ -41,7 +41,7 @@ class Thanos extends HTMLElement {
             easing: 'ease-out'
           })
         })
-      } else { // if it's reverse
+      } else { // reverse the snap
         playSound('https://www.google.com/logos/fnbx/thanos/thanos_reverse_sound.mp3')
         this.querySelector('img').src = 'reverse.gif' // snap picture
         elements.forEach(ele => {
